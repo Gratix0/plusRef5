@@ -1,0 +1,3 @@
+﻿  Recurs.cpp
+C:\Users\Александр\source\repos\Recurs\Recurs\Recurs.cpp(13,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Recurs.vcxproj -> C:\Users\Александр\source\repos\Recurs\x64\Debug\Recurs.exe

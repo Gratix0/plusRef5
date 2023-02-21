@@ -1,21 +1,26 @@
 ﻿
 #include<iostream>
 using namespace std;
-int Fact(int n)
+int global = 0;
+int global_too = 0;
+int Fact(int global)
 {
-    
-    if (n == 0 || n == 1)
+    int result;
+    if (global == 0 || global == 1)
         return 1;
     else
-        return n * Fact(n - 1);
+        result = global * Fact(global-1);
+        int &rres = result;
+        return rres;
+}
+void ras() {
+    cout << "Enter the num: ";
+    cin >> global;
+    global_too = Fact(global);
 }
 void main()
 {
-
-    int n = 0;
-    cout << "Enter the num: ";
-    cin >> n;
-    int t = Fact(n);
-    cout << "Factorial " << n << " equal " << t;
+    ras();
+    cout << "Factorial " << global << " equal " << global_too;
     cout << endl;
 }
